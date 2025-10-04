@@ -1,10 +1,42 @@
 body {
-    background-color: rgb(255, 0, 149);
-    
+    background-image: url("Asset/quartz.png");
 }
 h1 {
-  color: rgb(255, 225, 0);
+  color: #0077ff; /* test */
+  font-family: Monocraft;
+}
+nav {
+  background-color: rgba(255, 255, 255, 0.700);
+  border: solid powderblue;
+  border-radius: 8px; /* coin arrondis */
+  display: inline-block;
+  padding: 15px;
+  font-family: Monocraft;
 }
 h2 {
-  color: aquamarine;
+  color: #0056b3;
+  font-family: Monocraft;
+}
+p {
+  color: #1a1a1a;
+  background-color: rgba(255, 255, 255, 0.700);
+  border: solid powderblue;
+  border-radius: 8px; /* coin arrondis */
+  display: inline-block;
+  padding: 15px;
+  font-family: Monocraft;
+}
+ul {
+  background-color: rgba(255, 255, 255, 0.700);
+  border: solid powderblue;
+  border-radius: 8px;
+  display: inline-block;
+  padding: 20px;
+  font-family: Monocraft;
+}
+@font-face {
+  font-family: 'Monocraft';
+  src: url('Fonts/Monocraft.ttc') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
