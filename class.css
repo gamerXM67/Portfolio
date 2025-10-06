@@ -1,6 +1,13 @@
 body {
     background-image: url("Asset/quartz.png");
 }
+img {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2); /* effet d'ombre ( Hor/Ver/Flo W3schools*/
+}
+
 h1 {
   color: #0077ff; /* test */
   font-family: Monocraft;
