@@ -7,18 +7,21 @@ img {
   border-radius: 50%;
   box-shadow: 0 4px 20px rgba(0,0,0,0.2); /* effet d'ombre ( Hor/Ver/Flo W3schools*/
 }
+header {
+  margin-bottom: 70px; /* espace entre le header et a propos de moi */
+}
 
 h1 {
   color: #0077ff; /* test */
   font-family: Monocraft;
+  text-shadow:rgba(0, 0, 0, 0.6);
+  text-align: center
 }
-nav {
-  background-color: rgba(255, 255, 255, 0.700);
-  border: solid powderblue;
-  border-radius: 8px; /* coin arrondis */
-  display: inline-block;
-  padding: 15px;
-  font-family: Monocraft;
+nav{
+  text-align: center;
+}
+section {
+  margin-bottom: 50px;
 }
 h2 {
   color: #0056b3;
