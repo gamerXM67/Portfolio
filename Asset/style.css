@@ -1,5 +1,5 @@
 body {
-    background-image: url("Asset/quartz.png");
+    background-image: url("./quartz.png");
 }
 img {
   height: 300px;
@@ -46,6 +46,9 @@ ul {
   padding: 20px;
   font-family: Monocraft;
 }
+#Realisation li::first-line {
+  font-weight: bold;
+}
 footer {
   position: relative;
 }
@@ -55,7 +58,7 @@ footer p.Contact{
 .droits {
   display: inline-block;
   text-align: center;
-  background: none; /* enlève la box bleue si tu veux */
+  background: none; /* enlève la box bleue */
   border: none;
   font-size: 10px;
 }
