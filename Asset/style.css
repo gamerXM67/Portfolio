@@ -1,5 +1,39 @@
+html{
+  scroll-behavior: smooth;
+}
+.navbar {
+  background-color: rgba(0, 119, 255, 0.5); /* fond légèrement transparent */
+  position: fixed;       /* reste visible en haut même quand on scrolle */
+  top: 0;
+  left: 0;
+  width: 100%;           /* occupe toute la largeur */
+  z-index: 1000;         /* reste au-dessus du contenu */
+  backdrop-filter: blur(5px); /* effet de flou sympa */
+}
+.navbar a:visited,
+.navbar a:active {
+  color: rgb(0, 77, 165); /* même couleur que le lien normal */
+}
+.navbar ul {
+  list-style: none;      /* enlève les puces */
+  margin: 0;
+  padding: 10px 0;
+  display: flex;         /* les éléments sur une ligne */
+  justify-content: center; /* centrage horizontal */
+  gap: 30px;             /* espace entre les liens */
+  background: none; /* enlève la box bleue */
+  border: none;
+}
+.navbar a:hover {
+  color: rgb(255, 255, 255);          /* couleur au survol */
+  text-shadow: 0 0 5px rgb(255, 255, 255);
+}
+
 body {
-    background-image: url("./quartz.png");
+    padding-top: 70px; /* espace pour laisser passer la barre */
+    background-color: #f5f0e6; /* beige pâle */
+  color: #1a1a1a;
+    background-image: url("./quartz.png"); 
 }
 img {
   height: 300px;
@@ -14,7 +48,7 @@ header {
   display: inline-block;
 }
 h1 {
-  color: #0077ff; /* test */
+  color: rgb(0, 119, 255); /* test */
   font-family: Monocraft;
   text-shadow:rgba(0, 0, 0, 0.6);
   text-align: center
