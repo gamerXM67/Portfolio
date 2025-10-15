@@ -10,7 +10,9 @@ img {
 header {
   margin-bottom: 70px; /* espace entre le header et a propos de moi */
 }
-
+.desc_titre{
+  display: inline-block;
+}
 h1 {
   color: #0077ff; /* test */
   font-family: Monocraft;
@@ -43,6 +45,19 @@ ul {
   display: inline-block;
   padding: 20px;
   font-family: Monocraft;
+}
+footer {
+  position: relative;
+}
+footer p.Contact{
+  display: inline-block;
+}
+.droits {
+  display: inline-block;
+  text-align: center;
+  background: none; /* enlève la box bleue si tu veux */
+  border: none;
+  font-size: 10px;
 }
 @font-face {
   font-family: 'Monocraft';
