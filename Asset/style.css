@@ -1,104 +1,292 @@
-html{
-  scroll-behavior: smooth;
-}
-.navbar {
-  background-color: rgba(0, 119, 255, 0.5); /* fond légèrement transparent */
-  position: fixed;       /* reste visible en haut même quand on scrolle */
-  top: 0;
-  left: 0;
-  width: 100%;           /* occupe toute la largeur */
-  z-index: 1000;         /* reste au-dessus du contenu */
-  backdrop-filter: blur(5px); /* effet de flou sympa */
-}
-.navbar a:visited,
-.navbar a:active {
-  color: rgb(0, 77, 165); /* même couleur que le lien normal */
-}
-.navbar ul {
-  list-style: none;      /* enlève les puces */
+/* --------------------------------------------------
+   🌐 IMPORT DE LA POLICE + RÉINITIALISATION GLOBALE
+-------------------------------------------------- */
+
+/* Importation de la police "Outfit" depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+
+/* Réinitialisation de base pour éviter les marges/paddings par défaut */
+* {
   margin: 0;
-  padding: 10px 0;
-  display: flex;         /* les éléments sur une ligne */
-  justify-content: center; /* centrage horizontal */
-  gap: 30px;             /* espace entre les liens */
-  background: none; /* enlève la box bleue */
-  border: none;
-}
-.navbar a:hover {
-  color: rgb(255, 255, 255);          /* couleur au survol */
-  text-shadow: 0 0 5px rgb(255, 255, 255);
+  padding: 0;
+  box-sizing: border-box; /* Inclut le padding et la bordure dans la taille totale de l’élément */
 }
 
+/* --------------------------------------------------
+   🎨 STYLE GLOBAL DU SITE
+-------------------------------------------------- */
 body {
-    padding-top: 70px; /* espace pour laisser passer la barre */
-    background-color: #f5f0e6; /* beige pâle */
-  color: #1a1a1a;
-    background-image: url("./quartz.png"); 
+  font-family: 'Outfit', sans-serif; /* Police moderne et lisible */
+  background: radial-gradient(circle at 20% 20%, #0b132b, #1b1f3b, #121629); /* Dégradé radial sombre bleuté */
+  color: #f1f1f1; /* Texte clair pour contraste */
+  line-height: 1.6; /* Espacement vertical agréable à lire */
+  scroll-behavior: smooth; /* Défilement fluide entre les sections */
 }
-img {
-  height: 300px;
-  width: 300px;
-  border-radius: 50%;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2); /* effet d'ombre ( Hor/Ver/Flo W3schools*/
+
+/* --------------------------------------------------
+   🧭 BARRE DE NAVIGATION (NAVBAR)
+-------------------------------------------------- */
+.navbar {
+  position: fixed; /* Toujours visible en haut de la page */
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(12px); /* Effet de flou (verre dépoli) */
+  background: rgba(14, 22, 50, 0.7); /* Couleur sombre transparente */
+  border-bottom: 1px solid rgba(80, 120, 255, 0.2); /* Ligne lumineuse bleutée */
+  display: flex; /* Alignement horizontal des éléments */
+  justify-content: space-between; /* Logo à gauche, menu à droite */
+  align-items: center;
+  padding: 12px 40px;
+  z-index: 1000; /* Toujours au-dessus du contenu */
 }
-header {
-  margin-bottom: 70px; /* espace entre le header et a propos de moi */
+
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #8ecbff; /* Couleur bleue lumineuse */
 }
-.desc_titre{
-  display: inline-block;
+
+.navbar ul {
+  list-style: none; /* Supprime les puces */
+  display: flex;
+  gap: 26px; /* Espacement entre les liens */
 }
-h1 {
-  color: rgb(0, 119, 255); /* test */
-  font-family: Monocraft;
-  text-shadow:rgba(0, 0, 0, 0.6);
-  text-align: center
+
+.navbar a {
+  text-decoration: none;
+  color: #cfd9ff;
+  font-weight: 500;
+  transition: 0.3s; /* Animation douce au survol */
 }
-nav{
+
+/* Changement de couleur + effet lumineux quand actif ou survolé */
+.navbar a:hover,
+.navbar a.active {
+  color: #ffffff;
+  text-shadow: 0 0 8px #61b8ff;
+}
+
+/* --------------------------------------------------
+   🦸 SECTION D’ACCUEIL (HERO)
+-------------------------------------------------- */
+.hero {
+  height: 100vh; /* Occupe toute la hauteur de l’écran */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  background: linear-gradient(160deg, #0f162b, #141a3c 60%, #101226); /* Dégradé linéaire sombre */
 }
-section {
-  margin-bottom: 50px;
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  color: #89c8ff;
+  text-shadow: 0 0 15px #0055ff; /* Effet de lueur autour du texte */
+  margin-bottom: 12px;
 }
-h2 {
-  color: #0056b3;
-  font-family: Monocraft;
+
+.hero p {
+  color: #d3dcff;
+  font-size: 1.1rem;
+  margin-bottom: 24px;
 }
-p {
-  color: #1a1a1a;
-  background-color: rgba(255, 255, 255, 0.700);
-  border: solid powderblue;
-  border-radius: 8px; /* coin arrondis */
+
+/* Boutons d’action (liens vers autres sections ou téléchargement CV) */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px; /* Espacement entre les deux boutons */
+}
+
+/* Styles communs aux boutons */
+.btn, .btn-secondary {
+  padding: 10px 20px;
+  border-radius: 30px; /* Boutons arrondis */
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+/* Bouton principal avec dégradé bleu/violet */
+.btn {
+  background: linear-gradient(90deg, #4776E6, #8E54E9);
+  color: #fff;
+  box-shadow: 0 0 10px rgba(100, 160, 255, 0.5);
+}
+
+/* Effet d’agrandissement et halo au survol */
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(120, 200, 255, 0.8);
+}
+
+/* Bouton secondaire avec contour bleu clair */
+.btn-secondary {
+  border: 2px solid #89c8ff;
+  color: #89c8ff;
+}
+
+.btn-secondary:hover {
+  background: #89c8ff;
+  color: #0b1025; /* Texte foncé sur fond clair */
+}
+
+/* --------------------------------------------------
+   📦 STRUCTURE GÉNÉRALE DES SECTIONS
+-------------------------------------------------- */
+.section {
+  padding: 100px 8%; /* Espacement intérieur généreux */
+  margin-top: 40px;
+  backdrop-filter: blur(8px); /* Effet de verre dépoli */
+  background: rgba(20, 30, 70, 0.25); /* Fond semi-transparent */
+  border-radius: 16px; /* Coins arrondis */
+  box-shadow: 0 0 20px rgba(0,0,0,0.4); /* Ombre douce */
+}
+
+.section h2 {
+  text-align: center;
+  color: #90caff;
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+  text-shadow: 0 0 10px #4678ff; /* Lueur bleutée sur les titres */
+}
+
+/* --------------------------------------------------
+   👤 SECTION À PROPOS
+-------------------------------------------------- */
+.about-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap; /* S’adapte aux petits écrans */
+  background: rgba(18, 24, 50, 0.6);
+  border-radius: 16px;
+  padding: 30px;
+}
+
+/* Photo de profil arrondie avec effet de lumière */
+.profile-pic {
+  width: 130px;
+  height: 130px;
+  border-radius: 20px;
+  object-fit: cover; /* Garde le ratio sans déformer */
+  box-shadow: 0 0 10px rgba(120, 200, 255, 0.5);
+}
+
+.about-text h3 {
+  color: #b6d8ff;
+  margin-bottom: 8px;
+}
+
+/* Liste de “tags” illustrant les compétences ou qualités */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+/* Style des étiquettes (petits badges) */
+.tags span {
+  background: rgba(100, 160, 255, 0.15);
+  color: #a8cfff;
+  border: 1px solid rgba(120, 190, 255, 0.3);
+  border-radius: 12px;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+}
+
+/* --------------------------------------------------
+   ⚙️ SECTION TECHNOLOGIES
+-------------------------------------------------- */
+
+/* Grille responsive : s’adapte selon la largeur de l’écran */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Carte pour chaque technologie */
+.tech-card {
+  background: rgba(25, 35, 70, 0.6);
+  border: 1px solid rgba(100, 150, 255, 0.2);
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  font-weight: 600;
+  color: #c6dcff;
+  box-shadow: 0 0 10px rgba(60, 100, 255, 0.2);
+  transition: 0.3s;
+}
+
+/* Animation légère au survol */
+.tech-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 18px rgba(120, 200, 255, 0.6);
+}
+
+/* --------------------------------------------------
+   💼 SECTION PROJETS
+-------------------------------------------------- */
+.card {
+  background: rgba(25, 35, 70, 0.502) url('topography.svg');
+  border-radius: 16px;
+  padding: 24px;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(50, 100, 255, 0.1);
+}
+
+/* Titre de projet */
+.card h3 {
+  color: #9cd1ff;
+  margin-bottom: 10px;
+}
+
+/* Effet de survol : légère mise en avant */
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(100, 170, 255, 0.5);
+}
+
+/* Petits tags des technologies utilisées dans le projet */
+.tag {
   display: inline-block;
-  padding: 15px;
-  font-family: Monocraft;
+  margin-top: 8px;
+  background: rgba(80, 130, 255, 0.2);
+  border-radius: 10px;
+  padding: 4px 10px;
+  font-size: 0.9rem;
+  color: #a9d5ff;
 }
-ul {
-  background-color: rgba(255, 255, 255, 0.700);
-  border: solid powderblue;
-  border-radius: 8px;
-  display: inline-block;
-  padding: 20px;
-  font-family: Monocraft;
+
+/* --------------------------------------------------
+   📞 SECTION CONTACT
+-------------------------------------------------- */
+.contact-card {
+  text-align: center;
+  background: rgba(25, 35, 70, 0.6);
+  border-radius: 16px;
+  padding: 40px 20px;
 }
-#Realisation li::first-line {
-  font-weight: bold;
+
+/* Lien de contact (email, LinkedIn...) */
+.contact-card a {
+  color: #a9d5ff;
+  text-decoration: none;
 }
+
+/* Lueur bleue au survol des liens */
+.contact-card a:hover {
+  text-shadow: 0 0 8px #61b8ff;
+}
+
+/* --------------------------------------------------
+   ⚙️ PIED DE PAGE
+-------------------------------------------------- */
 footer {
-  position: relative;
-}
-footer p.Contact{
-  display: inline-block;
-}
-.droits {
-  display: inline-block;
   text-align: center;
-  background: none; /* enlève la box bleue */
-  border: none;
-  font-size: 10px;
-}
-@font-face {
-  font-family: 'Monocraft';
-  src: url('Fonts/Monocraft.ttc') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+  padding: 30px;
+  color: #8899cc;
+  font-size: 0.9rem;
 }

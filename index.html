@@ -1,92 +1,105 @@
 <!doctype html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href=".\Asset\style.css">
-    <title>Portfolio - LINCK Manuel</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Manuel Linck</title>
+  <link rel="stylesheet" href="Asset/style.css">
 </head>
+<body>
 
-<body> 
-        <header>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="#">Accueil</a></li>
-                    <li><a href="#aProposDeMoi">À propos</a></li>
-                    <li><a href="#soft-skills">Soft Skills</a></li>
-                    <li><a href="#Realisation">Réalisations</a></li>
-                    <li><a href="#Technologies">Technologies</a></li>
-                    <li><a href="#Contact">Contact</a></li>
-                </ul>
-            </nav>
-           <img src=".\Asset\depression.jpg" alt="mon neveux en deppression"/> <!-- temporaire, a remmplacé par photo de profile-->
+  <!-- ===== HEADER / MENU ===== -->
+  <header class="navbar">
+    <div class="logo">💠 Manuel Linck</div>
+    <nav>
+      <ul>
+        <li><a href="#accueil" class="active">Accueil</a></li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#technologies">Technologies</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-                <h1>
-                    Portfolio - LINCK Manuel
-                </h1> <!-- titre (1 seul titre) -->
-               <nav>
-                    <p id="desc_titre">
-                    Développeur en devenir, passionné par le web et les nouvelles technologies.
-                    </p>
-               </nav> <!-- Menu -->
-        </header>
+  <!-- ===== ACCUEIL ===== -->
+  <section id="accueil" class="hero">
+    <div class="hero-content">
+      <h1>Bienvenue sur mon Portfolio</h1>
+      <p>Étudiant en <strong>BTS SIO</strong> passionné par le web, les systèmes et les réseaux.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn">Me contacter</a>
+        <a href="https://github.com/gamerXM67" target="_blank" class="btn-secondary">Mon GitHub</a>
+      </div>
+    </div>
+  </section>
 
-        <section id ="aProposDeMoi">
-            <h2>
-                A propos de moi
-            </h2>
-            <p>
-                Je suis passionné par le développement et l’informatique en général.<br>
-                Mon objectif est de créer des projets utiles et créatifs, tout en améliorant mes compétences techniques et personnelles 
-            </p>
+  <!-- ===== À PROPOS ===== -->
+  <section id="apropos" class="section">
+    <h2>À propos de moi</h2>
+    <div class="card about-card">
+      <img src="Asset/depression.jpg" alt="Photo de profil" class="profile-pic">
+      <div class="about-text">
+        <h3>Manuel Linck</h3>
+        <p>Je suis étudiant en BTS SIO (Services Informatiques aux Organisations). Passionné par l’administration système, la cybersécurité et le développement web, je cherche à approfondir mes compétences à travers l’alternance.</p>
+        <div class="tags">
+          <span>Windows 10 → 11</span>
+          <span>Refonte web (HTML/CSS/JS)</span>
+          <span>Réseaux & virtualisation</span>
+          <span>PowerShell & automatisation</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        </section>
-        <section id="soft-skills">
-            <h2>
-                Soft Skills
-            </h2>
-                <ul>
-                    <li>Patient</li>
-                    <li>Autonomie et adaptabilité</li>
-                    <li>Curieux</li>
-                </ul>
-        </section>
-        <section id ="Realisation">
-            <h2>
-                Réalisation
-            </h2>
-            <ul>
-                <li>Portfolio personnel – Site web pour présenter mes projets.</li>
-                <li>Mini-Jeu en C – Petit jeu simple pour s'exercer à la logique.</li>
-                <li>Virtualisation de Machine – Utilisation de VirtualBox pour émuler un serveur.</li>
-            </ul>
-        </section>
-        <section id ="Technologies">
-            <h2>
-                Technologies
-            </h2>
-            <ul>
-                <li>HTML5 / CSS3</li>
-                <li>VirtualBox</li>
-                <li>Git & GitHub</li>
-                <li>Cisco Packet Tracer</li>
-            </ul>
-        </section>
-    
-        <footer>
-            <section id ="Contact">
-            <h2>Contact</h2>
-                <p>
-                    Vous pouvez me contacter via :
-                    <br>
-                    <a href="https://github.com/gamerXM67" target="_blank">GitHub</a>
-                    <br>
-                    <a href="https://www.linkedin.com/in/manuel-linck-a24028302" target="_blank">LinkedIn</a>
-                </p>
-            </section>
-            <p class="droits">&copy; 2025 Mon Portfolio – Tous droits réservés</p>
-        </footer>
-    </body>
+  <!-- ===== TECHNOLOGIES ===== -->
+  <section id="technologies" class="section">
+    <h2>Technologies</h2>
+    <div class="grid">
+      <div class="tech-card">💻 HTML / CSS / JS</div>
+      <div class="tech-card">⚙️ PowerShell</div>
+      <div class="tech-card">🌐 Réseau & IP</div>
+      <div class="tech-card">🪟 Windows / VirtualBox</div>
+    </div>
+  </section>
 
+  <!-- ===== PROJETS ===== -->
+  <section id="projets" class="section">
+    <h2>Projets</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Migration Windows 10 → 11</h3>
+        <p>Planification, sauvegarde, installation et configuration complète du poste utilisateur.</p>
+        <span class="tag">PowerShell</span>
+      </div>
+      <div class="card">
+        <h3>Refonte d’un site vitrine</h3>
+        <p>Optimisation responsive, SEO et modernisation du design.</p>
+        <span class="tag">HTML / CSS / JS</span>
+      </div>
+      <div class="card">
+        <h3>Scripts d’automatisation</h3>
+        <p>Création de scripts PowerShell pour nettoyage, backup et reporting système.</p>
+        <span class="tag">Automatisation</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <div class="contact-card">
+      <p>📧 <a href="mailto:manuellinck04@gmail.com">manuellinck04@gmail.com</a></p>
+      <div class="socials">
+        <a href="https://github.com/gamerXM67" target="_blank">GitHub</a> |
+        <a href="https://www.linkedin.com/in/manuel-linck-a24028302" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Manuel Linck – Portfolio BTS SIO</p>
+  </footer>
+
+</body>
 </html>
