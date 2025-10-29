@@ -37,7 +37,7 @@ body {
   justify-content: space-between; /* Logo à gauche, menu à droite */
   align-items: center;
   padding: 12px 40px;
-  z-index: 1000; /* Toujours au-dessus du contenu */
+  z-index: 45; /* Toujours au-dessus du contenu */
 }
 
 .logo {
@@ -75,7 +75,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(160deg, #0f162b, #141a3c 60%, #101226); /* Dégradé linéaire sombre */
+  background: linear-gradient(160deg, rgb(15, 22, 43), rgb(20, 26, 60) 60%, rgb(16, 18, 38)); /* Dégradé linéaire sombre */
 }
 
 .hero-content h1 {
@@ -158,7 +158,7 @@ body {
   display: flex;
   align-items: center;
   gap: 24px;
-  flex-wrap: wrap; /* S’adapte aux petits écrans */
+  /* flex-wrap: wrap; /* S’adapte aux petits écrans */
   background: rgba(18, 24, 50, 0.6);
   border-radius: 16px;
   padding: 30px;
@@ -166,14 +166,16 @@ body {
 
 /* Photo de profil arrondie avec effet de lumière */
 .profile-pic {
+  vertical-align: middle;
   width: 130px;
-  height: 130px;
   border-radius: 20px;
   object-fit: cover; /* Garde le ratio sans déformer */
   box-shadow: 0 0 10px rgba(120, 200, 255, 0.5);
 }
 
 .about-text h3 {
+  display: inline-block;
+  vertical-align: middle;
   color: #b6d8ff;
   margin-bottom: 8px;
 }
@@ -201,15 +203,33 @@ body {
 -------------------------------------------------- */
 
 /* Grille responsive : s’adapte selon la largeur de l’écran */
-.grid {
+.grid { /* en commun/utilisation avec la section projets */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));  /*a refaire car je n'ai pas trouvé la solutions sans chatgpt*/
   gap: 20px;
 }
 
 /* Carte pour chaque technologie */
+.card {
+  background: rgba(25, 35, 70, 0.502) url('topography.svg');
+  border-radius: 16px;
+  padding: 24px;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(50, 100, 255, 0.1);
+}
+
+/* Animation légère au survol */
+.tech-card:hover {  /* section projets */
+  transform: scale(1.05);
+  box-shadow: 0 0 18px rgba(120, 200, 255, 0.6);
+}
+
+/* --------------------------------------------------
+   💼 SECTION PROJETS
+-------------------------------------------------- */
+
 .tech-card {
-  background: rgba(25, 35, 70, 0.6);
+  background: rgba(25, 35, 70, 0.6) url('topography.svg');
   border: 1px solid rgba(100, 150, 255, 0.2);
   border-radius: 16px;
   padding: 24px;
@@ -218,23 +238,6 @@ body {
   color: #c6dcff;
   box-shadow: 0 0 10px rgba(60, 100, 255, 0.2);
   transition: 0.3s;
-}
-
-/* Animation légère au survol */
-.tech-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 18px rgba(120, 200, 255, 0.6);
-}
-
-/* --------------------------------------------------
-   💼 SECTION PROJETS
--------------------------------------------------- */
-.card {
-  background: rgba(25, 35, 70, 0.502) url('topography.svg');
-  border-radius: 16px;
-  padding: 24px;
-  transition: 0.3s;
-  box-shadow: 0 0 10px rgba(50, 100, 255, 0.1);
 }
 
 /* Titre de projet */
@@ -290,3 +293,4 @@ footer {
   color: #8899cc;
   font-size: 0.9rem;
 }
+@media (min-width: 600px)
