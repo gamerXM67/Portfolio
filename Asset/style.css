@@ -205,8 +205,10 @@ body {
 /* Grille responsive : s’adapte selon la largeur de l’écran */
 .grid { /* en commun/utilisation avec la section projets */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));  /*a refaire car je n'ai pas trouvé la solutions sans chatgpt*/
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  border-radius: 5px;
+  /*grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));  /*a refaire car je n'ai pas trouvé la solutions sans chatgpt*/
+  gap: 1.5em;
 }
 
 /* Carte pour chaque technologie */
@@ -293,4 +295,8 @@ footer {
   color: #8899cc;
   font-size: 0.9rem;
 }
-@media (min-width: 600px)
+@media (max-width: 768px){
+  .tech-card {
+    display: grid;
+  }
+}
