@@ -15,12 +15,14 @@
 /* --------------------------------------------------
    🎨 STYLE GLOBAL DU SITE
 -------------------------------------------------- */
+html {
+  scroll-behavior: smooth; /* Défilement fluide entre les sections */
+}
 body {
   font-family: 'Outfit', sans-serif; /* Police moderne et lisible */
   background: radial-gradient(circle at 20% 20%, #0b132b, #1b1f3b, #121629); /* Dégradé radial sombre bleuté */
   color: #f1f1f1; /* Texte clair pour contraste */
   line-height: 1.6; /* Espacement vertical agréable à lire */
-  scroll-behavior: smooth; /* Défilement fluide entre les sections */
 }
 
 /* --------------------------------------------------
